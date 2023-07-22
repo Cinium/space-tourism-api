@@ -15,6 +15,8 @@ const port = process.env.PORT || 3001;
 
 app.use(cors(corsOptions))
 
+app.use(express.json());
+
 app.use(express.static(path.join(__dirname, 'assets')));
 
 app.get('/members', (req, res) => {
